@@ -71,13 +71,13 @@ class Sidebar extends Component {
             Zodiac
           </a>
         </div>
-        <div className="sidebar-wrapper">
-          <ul className="nav">
+        <div className="sidebar-wrapper" >
+          <ul className="nav" style={{width:"100px"}}>
             {this.state.width <= 991 ? <AdminNavbarLinks /> : null}
             {this.props.routes.map((prop, key) => {
               if (!prop.redirect)
                 return (
-                  <li
+                  <li 
                     className={
                       prop.upgrade
                         ? "active active-pro"
@@ -85,7 +85,7 @@ class Sidebar extends Component {
                     }
                     key={key}
                   >
-                    <NavLink
+                    <NavLink style={{width:"200px"}}
                       to={prop.layout + prop.path}
                       className="nav-link"
                       activeClassName="active"

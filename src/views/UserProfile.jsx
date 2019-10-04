@@ -17,12 +17,10 @@
 */
 import React, { Component } from "react";
 import {
-  Grid,
+  Container,
   Row,
   Col,
-  FormGroup,
-  ControlLabel,
-  FormControl
+  Form,
 } from "react-bootstrap";
 
 import { Card } from "components/Card/Card.jsx";
@@ -36,7 +34,7 @@ class UserProfile extends Component {
   render() {
     return (
       <div className="content">
-        <Grid fluid>
+        <Container fluid>
           <Row>
             <Col md={8}>
               <Card
@@ -129,16 +127,16 @@ class UserProfile extends Component {
 
                     <Row>
                       <Col md={12}>
-                        <FormGroup controlId="formControlsTextarea">
-                          <ControlLabel>About Me</ControlLabel>
-                          <FormControl
+                        <Form.Group controlId="formControlsTextarea">
+                          <Form.Label>About Me</Form.Label>
+                          <Form.Control
                             rows="5"
                             componentClass="textarea"
                             bsClass="form-control"
                             placeholder="Here can be your description"
                             defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
                           />
-                        </FormGroup>
+                        </Form.Group>
                       </Col>
                     </Row>
                     <Button bsStyle="info" pullRight fill type="submit">
@@ -180,7 +178,7 @@ class UserProfile extends Component {
               />
             </Col>
           </Row>
-        </Grid>
+        </Container>
       </div>
     );
   }
